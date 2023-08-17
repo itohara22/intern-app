@@ -13,15 +13,24 @@ const Hero = () => {
         </div>
         <div className="grid place-items-center h-full w-full">Hero img</div>
       </div>
-      <div className="grid grid-cols-3 py-16 gap-8 justify-items-center">
+      <div className="grid grid-cols-3 py-16 gap-8 justify-items-center min-h-[300px]">
         <h3 className="text-2xl font-semibold">Placeholder</h3>
-        <div className="text-sm leading-loose">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut dolor
-          corrupti odit, in incidunt iste dicta dolorem quam eos nisi labore
+        <div className="min-h-full pr-4">
+          <p className="text-sm leading-loose h-full">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut dolor
+            corrupti odit, in incidunt iste dicta dolorem quam eos nisi labore
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Voluptatem, voluptatibus.
+          </p>
         </div>
-        <div className="text-sm leading-loose">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut dolor
-          corrupti odit, in incidunt iste dicta dolorem quam eos nisi labore
+        <div className="min-h-full pr-4">
+          <p className="text-sm leading-loose pr-4 h-full">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut dolor
+            corrupti odit, in incidunt iste dicta dolorem quam eos nisi labore
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus
+            illo reiciendis dolor pariatur saepe rerum qui iste nisi adipisci.
+            Magnam!
+          </p>
         </div>
       </div>
     </div>
