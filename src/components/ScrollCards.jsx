@@ -1,13 +1,58 @@
+"use client";
 import Image from "next/image";
 import { scrollCardData } from "@/data/data";
+import { motion, easeOutExpo } from "framer-motion";
+
+const scrollCardAnimation = {
+  initial: {
+    x: "100%",
+  },
+  animate: {
+    x: 0,
+    transition: {
+      duration: 2,
+      ease: easeOutExpo,
+      type: "spring",
+    },
+  },
+};
+
+const headingAnimation = {
+  initial: {
+    scale: 0,
+    x: 100,
+    opacity: 0,
+  },
+  animate: {
+    scale: 1,
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 2,
+      type: "spring",
+    },
+  },
+};
 
 const ScrollCard = () => {
   return (
     <div id="emotions">
-      <h2 className="text-4xl mt-4 mb-10 px-8 font-bold">
+      <motion.h2
+        variants={headingAnimation}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        className="text-4xl mt-4 mb-10 px-8 font-bold"
+      >
         Lorem ipsum dolor sit.
-      </h2>
-      <div className=" flex overflow-x-scroll p-10 hide-scroll-bar">
+      </motion.h2>
+      <motion.div
+        variants={scrollCardAnimation}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        className=" flex overflow-x-scroll p-10 hide-scroll-bar"
+      >
         <div className="flex flex-nowrap">
           {scrollCardData.map((data, index) => {
             return (
@@ -27,7 +72,7 @@ const ScrollCard = () => {
             );
           })}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
