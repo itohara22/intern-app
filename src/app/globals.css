@@ -14,3 +14,21 @@ html {
 .hide-scroll-bar::-webkit-scrollbar {
   display: none;
 }
+#selfimp-list li::before {
+  content: "";
+  height: 40px;
+  width: 2px;
+  position: absolute;
+  left: -2px;
+  background: linear-gradient(transparent, rgb(255, 21, 255), transparent);
+  top: 10%;
+  opacity: 0;
+  transition: top, opacity;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
+
+#selfimp-list li:hover::before {
+  opacity: 1;
+  top: 50%;
+}
