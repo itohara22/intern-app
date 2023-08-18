@@ -20,7 +20,7 @@ const Manifesto = () => {
           </div>
         </div>
         <div>
-          <p className="leading-8">
+          <p className="leading-8 pr-[3vw]">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui
             perspiciatis, voluptates magni perferendis esse ipsum nulla ut
             labore, iusto, fugit expedita. Incidunt, rem? Quo deserunt corrupti,

@@ -32,3 +32,21 @@ html {
   opacity: 1;
   top: 50%;
 }
+
+#self-aware-div::before {
+  content: "";
+  position: absolute;
+  top: 24%;
+  left: 20%;
+  right: 20%;
+  border-top: 3px dashed rgb(240, 208, 93);
+}
+
+#bubbles::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(126, 62, 228);
+  aspect-ratio: 1;
+  width: 18px;
+  border-radius: 50%;
+}
