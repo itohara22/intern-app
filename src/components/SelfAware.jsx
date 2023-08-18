@@ -50,7 +50,7 @@ const SelfAware = () => {
             className="grid grid-rows-2 place-items-center"
           >
             <div className="relative ">
-              <Image src={sunImg} width={60} height={60} />
+              <Image src={sunImg} width={60} height={60} alt="" />
               <span className="absolute z-10 top-[19px] left-[26px] text-black">
                 1
               </span>
@@ -65,7 +65,7 @@ const SelfAware = () => {
             className="grid grid-rows-2 place-items-center"
           >
             <div className="relative ">
-              <Image src={sunImg} width={60} height={60} />
+              <Image src={sunImg} width={60} height={60} alt="" />
               <span className="absolute z-10 top-[19px] left-[26px] text-black">
                 2
               </span>
@@ -80,7 +80,7 @@ const SelfAware = () => {
             className="grid grid-rows-2 place-items-center"
           >
             <div className="relative ">
-              <Image src={sunImg} width={60} height={60} />
+              <Image src={sunImg} width={60} height={60} alt="" />
               <span className="absolute z-10 top-[19px] left-[26px] text-black">
                 3
               </span>

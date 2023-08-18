@@ -62,7 +62,7 @@ const Work = () => {
         <div className="grid grid-cols-2 place-items-center">
           <div className="mt-3 max-w-[40vw] min-h-full grid">
             <div className="bg-orange-50 p-4 md:p-8 lg:p-10 rounded-t-lg drop-shadow-sm">
-              <Image src={imgSrc} height={50} width={50} />
+              <Image src={imgSrc} height={50} width={50} alt="" />
               <h3 className="text-2xl font-semibold mb-4 mt-2">lorem</h3>
               <p className="text-sm leading-6">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,

@@ -75,7 +75,7 @@ const Manifesto = () => {
               whileInView="animate"
               viewport={{ once: true }}
             >
-              <Image src={sunSrc} width={50} height={50} />
+              <Image src={sunSrc} width={50} height={50} alt="" />
             </motion.div>
             <motion.div
               variants={imgAnimation}
@@ -84,7 +84,7 @@ const Manifesto = () => {
               viewport={{ once: true }}
               className="self-center "
             >
-              <Image src={tedSrc} width={200} height={200} />
+              <Image src={tedSrc} width={200} height={200} alt="" />
             </motion.div>
           </div>
         </div>

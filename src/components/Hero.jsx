@@ -62,7 +62,7 @@ const Hero = () => {
           viewport={{ once: true }}
           className="grid place-items-center h-full w-full"
         >
-          <Image src={imgSrc} height={300} width={300} />
+          <Image src={imgSrc} height={300} width={300} alt="" />
         </motion.div>
       </div>
       <div className="grid grid-cols-3 py-16 gap-8 justify-items-center min-h-[300px]">
