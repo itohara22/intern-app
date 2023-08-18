@@ -5,7 +5,7 @@ const sunImg = "./sun.svg";
 const SelfAware = () => {
   return (
     <div className=" text-black px-4">
-      <div className="bg-violet-100 mx-auto grid sm:grid-rows-3 place-items-center px-14 md:px-[10vw] xl:px-[15vw] py-8 my-2 rounded-2xl  min-w-full min-h-[80vh] gap-4 ">
+      <div className="bg-violet-100 mx-auto grid sm:grid-rows-3 place-items-center px-14 md:px-[10vw] xl:px-[15vw] py-8 my-2 rounded-2xl  min-w-full min-h-[85vh] gap-4 ">
         <div>
           <p className="text-sm lg:text-md font-semibold text-center">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore,
