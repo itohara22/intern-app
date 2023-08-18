@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { scrollCardData } from "@/data/data";
 
 const ScrollCard = () => {
   return (
@@ -8,70 +9,23 @@ const ScrollCard = () => {
       </h2>
       <div className=" flex overflow-x-scroll p-10 hide-scroll-bar">
         <div className="flex flex-nowrap">
-          <div className="inline-block px-3">
-            <div className="bg-orange-200 p-10 w-[40ch] rounded-3xl m-2 hover:rotate-[2deg] transition-all duration-75">
-              <Image
-                src={"/emoji.svg"}
-                width={50}
-                height={50}
-                className="mb-6"
-              />
-              <h4 className="font-bold mb-4 text-lg">Lorem, ipsum dolor.</h4>
-              <p className="text-sm leading-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laboriosam dicta ipsam est rerum aliquid a? Lorem ipsum dolor
-                sit amet.
-              </p>
-            </div>
-          </div>
-          <div className="inline-block px-3">
-            <div className="bg-orange-200 p-10 w-[40ch] rounded-3xl m-2 hover:rotate-[2deg] transition-all duration-75">
-              <Image
-                src={"/emoji.svg"}
-                width={50}
-                height={50}
-                className="mb-6"
-              />
-              <h4 className="font-bold mb-4 text-lg">Lorem, ipsum dolor.</h4>
-              <p className="text-sm leading-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laboriosam dicta ipsam est rerum aliquid a? Lorem ipsum dolor
-                sit amet.
-              </p>
-            </div>
-          </div>
-          <div className="inline-block px-3">
-            <div className="bg-orange-200 p-10 w-[40ch] rounded-3xl m-2 hover:rotate-[2deg] transition-all duration-75">
-              <Image
-                src={"/emoji.svg"}
-                width={50}
-                height={50}
-                className="mb-6"
-              />
-              <h4 className="font-bold mb-4 text-lg">Lorem, ipsum dolor.</h4>
-              <p className="text-sm leading-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laboriosam dicta ipsam est rerum aliquid a? Lorem ipsum dolor
-                sit amet.
-              </p>
-            </div>
-          </div>
-          <div className="inline-block px-3">
-            <div className="bg-orange-200 p-10 w-[40ch] rounded-3xl m-2 hover:rotate-[2deg] transition-all duration-75">
-              <Image
-                src={"/emoji.svg"}
-                width={50}
-                height={50}
-                className="mb-6"
-              />
-              <h4 className="font-bold mb-4 text-lg">Lorem, ipsum dolor.</h4>
-              <p className="text-sm leading-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laboriosam dicta ipsam est rerum aliquid a? Lorem ipsum dolor
-                sit amet.
-              </p>
-            </div>
-          </div>
+          {scrollCardData.map((data, index) => {
+            return (
+              <div key={index} className="inline-block px-3">
+                <div className="bg-orange-200 p-10 w-[40ch] rounded-3xl m-2 hover:rotate-[2deg] transition-all duration-75">
+                  <Image
+                    src={"/emoji.svg"}
+                    width={50}
+                    height={50}
+                    className="mb-6"
+                    alt="emoji"
+                  />
+                  <h4 className="font-bold mb-4 text-lg">{data.heading}</h4>
+                  <p className="text-sm leading-6">{data.para}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

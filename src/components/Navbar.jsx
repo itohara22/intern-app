@@ -7,7 +7,7 @@ const Navbar = () => {
             App
           </a>
         </div>
-        <ul className="flex gap-8">
+        <ul className="flex gap-8 text-sm font-semibold">
           <li>
             <a href="#emotions" className="text-black">
               Emotions

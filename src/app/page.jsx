@@ -4,6 +4,9 @@ import Manifesto from "@/components/Manifesto";
 import SelfImp from "@/components/SelfImp";
 import SelfAware from "@/components/SelfAware";
 import Privacy from "@/components/Privacy";
+import Work from "@/components/Work";
+import Vacancies from "@/components/Vacancies";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +17,9 @@ export default function Home() {
       <SelfImp />
       <SelfAware />
       <Privacy />
+      <Work />
+      <Vacancies />
+      <Footer />
     </>
   );
 }

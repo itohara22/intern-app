@@ -37,4 +37,32 @@ const selfImportantList = [
   },
 ];
 
-export { selfImportantList };
+const scrollCardData = [
+  {
+    heading: "Lorem, ipsum dolor.",
+    para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.    Laboriosam dicta ipsam est rerum aliquid a? Lorem ipsum dolor sit amet.",
+  },
+  {
+    heading: "Lorem, ipsum dolor.",
+    para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.    Laboriosam dicta ipsam est rerum aliquid a? Lorem ipsum dolor sit amet.",
+  },
+  {
+    heading: "Lorem, ipsum dolor.",
+    para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.    Laboriosam dicta ipsam est rerum aliquid a? Lorem ipsum dolor sit amet.",
+  },
+  {
+    heading: "Lorem, ipsum dolor.",
+    para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.    Laboriosam dicta ipsam est rerum aliquid a? Lorem ipsum dolor sit amet.",
+  },
+  {
+    heading: "Lorem, ipsum dolor.",
+    para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.    Laboriosam dicta ipsam est rerum aliquid a? Lorem ipsum dolor sit amet.",
+  },
+  {
+    heading: "Lorem, ipsum dolor.",
+    para: "Lorem ipsum dolor sit amet consectetur adipisicing elit.    Laboriosam dicta ipsam est rerum aliquid a? Lorem ipsum dolor sit amet.",
+  },
+];
+
+
+export { selfImportantList, scrollCardData };
