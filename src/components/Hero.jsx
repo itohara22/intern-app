@@ -1,11 +1,52 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 const imgSrc = "/teddy.svg";
+
+const headingAnimation = {
+  initial: {
+    scale: 0,
+    x: 100,
+    opacity: 0,
+  },
+  animate: {
+    scale: 1,
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 2,
+      type: "spring",
+    },
+  },
+};
+
+const imgAnimation = {
+  initial: {
+    opacity: 0,
+    x: -100,
+    rotate: 180,
+  },
+  animate: {
+    rotate: 0,
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+};
 
 const Hero = () => {
   return (
     <div className=" text-black px-4 mt-20">
       <div className="bg-violet-100 mx-auto grid sm:grid-cols-2 place-items-center px-14 md:px-[10vw] xl:px-[15vw] my-2 rounded-2xl  min-w-full min-h-[80vh] gap-4 ">
-        <div className=" pr-8">
+        <motion.div
+          variants={headingAnimation}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          className=" pr-8"
+        >
           <p className="text-sm ">My App</p>
           <h1 className="text-5xl leading-[3.5rem] lg:text-6xl font-bold mt-2 mb-8">
             Welcome to Our Website
@@ -13,10 +54,16 @@ const Hero = () => {
           <button className="bg-black text-white px-6 py-3 rounded-full hover:scale-105 focus:outline-none focus:ring focus:ring-blue-300 transition-all duration-50 my-auto">
             Explore Now
           </button>
-        </div>
-        <div className="grid place-items-center h-full w-full">
+        </motion.div>
+        <motion.div
+          variants={imgAnimation}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          className="grid place-items-center h-full w-full"
+        >
           <Image src={imgSrc} height={300} width={300} />
-        </div>
+        </motion.div>
       </div>
       <div className="grid grid-cols-3 py-16 gap-8 justify-items-center min-h-[300px]">
         <h3 className="text-2xl font-semibold">Placeholder</h3>

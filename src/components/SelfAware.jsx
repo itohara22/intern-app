@@ -1,6 +1,28 @@
+"use client";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 const sunImg = "./sun.svg";
+
+const fadeAnimation = {
+  initial: {},
+  animate: {
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const fadeAnimationChild = {
+  initial: {
+    opacity: 0,
+    scale: 0,
+  },
+  animate: {
+    opacity: 1,
+    scale: 1,
+  },
+};
 
 const SelfAware = () => {
   return (
@@ -15,11 +37,18 @@ const SelfAware = () => {
             Lorem ipsum dolor sit amet consectetur.
           </h2>
         </div>
-        <div
-          id="self-aware-div"
+        <motion.div
+          variants={fadeAnimation}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
           className=" relative grid grid-cols-3 place-content-center w-full "
         >
-          <div className="grid grid-rows-2 place-items-center">
+          <motion.div
+            variants={fadeAnimationChild}
+            viewport={{ once: true }}
+            className="grid grid-rows-2 place-items-center"
+          >
             <div className="relative ">
               <Image src={sunImg} width={60} height={60} />
               <span className="absolute z-10 top-[19px] left-[26px] text-black">
@@ -29,8 +58,12 @@ const SelfAware = () => {
             <p className="text-center text-xs md:text-sm">
               Lorem ipsum dolor sit amet
             </p>
-          </div>
-          <div className="grid grid-rows-2 place-items-center">
+          </motion.div>
+          <motion.div
+            variants={fadeAnimationChild}
+            viewport={{ once: true }}
+            className="grid grid-rows-2 place-items-center"
+          >
             <div className="relative ">
               <Image src={sunImg} width={60} height={60} />
               <span className="absolute z-10 top-[19px] left-[26px] text-black">
@@ -40,8 +73,12 @@ const SelfAware = () => {
             <p className="text-center text-xs md:text-sm">
               Lorem ipsum dolor sit amet
             </p>
-          </div>
-          <div className="grid grid-rows-2 place-items-center">
+          </motion.div>
+          <motion.div
+            variants={fadeAnimationChild}
+            viewport={{ once: true }}
+            className="grid grid-rows-2 place-items-center"
+          >
             <div className="relative ">
               <Image src={sunImg} width={60} height={60} />
               <span className="absolute z-10 top-[19px] left-[26px] text-black">
@@ -51,38 +88,67 @@ const SelfAware = () => {
             <p className="text-center text-xs md:text-sm">
               Lorem ipsum dolor sit amet
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
         <div
           id="bubble-container"
-          className="w-[80%] max-w-[60vw] mx-auto bg-white h-full  rounded-xl drop-shadow-sm p-3 relative"
+          className="w-[80%] max-w-[60vw] mx-auto bg-white h-full  rounded-xl drop-shadow-md p-3 relative"
         >
-          <div className="p-2 text-white bg-violet-600 rounded-md absolute -left-[10%] top-4">
-            <span
-              id="bubbles"
-              className="relative after:-right-2 after:-bottom-10"
+          <motion.div
+            variants={fadeAnimation}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+          >
+            <motion.div
+              viewport={{ once: true }}
+              variants={fadeAnimationChild}
+              className="p-2 text-white bg-violet-600 rounded-md absolute -left-[10%] top-6"
             >
-              Lorem, ipsum
-            </span>
-          </div>
-          <div className="p-2 text-white bg-violet-600 rounded-md absolute left-[30%] bottom-4">
-            <span id="bubbles" className="relative after:-left-2 after:-top-12">
-              Lorem, ipsum
-            </span>
-          </div>
-          <div className="p-2 text-white bg-violet-600 rounded-md absolute right-[30%] top-4">
-            <span
-              id="bubbles"
-              className="relative after:-bottom-10 after:-left-2"
+              <span
+                id="bubbles"
+                className="relative after:-right-2 after:-bottom-[42px]"
+              >
+                Lorem, ipsum
+              </span>
+            </motion.div>
+            <motion.div
+              viewport={{ once: true }}
+              variants={fadeAnimationChild}
+              className="p-2 text-white bg-violet-600 rounded-md absolute left-[30%] bottom-6"
             >
-              Lorem, ipsum
-            </span>
-          </div>
-          <div className="p-2 text-white bg-violet-600 rounded-md absolute bottom-4 -right-[10%] ">
-            <span id="bubbles" className="relative after:-left-2 after:-top-12">
-              Lorem, ipsum
-            </span>
-          </div>
+              <span
+                id="bubbles"
+                className="relative after:-left-2 after:-top-[42px]"
+              >
+                Lorem, ipsum
+              </span>
+            </motion.div>
+            <motion.div
+              viewport={{ once: true }}
+              variants={fadeAnimationChild}
+              className="p-2 text-white bg-violet-600 rounded-md absolute right-[30%] top-6"
+            >
+              <span
+                id="bubbles"
+                className="relative after:-bottom-[42px] after:-left-2"
+              >
+                Lorem, ipsum
+              </span>
+            </motion.div>
+            <motion.div
+              viewport={{ once: true }}
+              variants={fadeAnimationChild}
+              className="p-2 text-white bg-violet-600 rounded-md absolute bottom-6 -right-[10%] "
+            >
+              <span
+                id="bubbles"
+                className="relative after:-left-2 after:-top-[42px]"
+              >
+                Lorem, ipsum
+              </span>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <nav className=" bg-white p-4 fixed top-0 w-full z-10">
+    <nav className=" bg-white p-4 fixed top-0 w-full z-[100]">
       <div className=" mx-auto  flex justify-around items-center gap-10">
         <div>
           <a href="#" className="text-black text-xl font-bold">

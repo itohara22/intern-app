@@ -25,14 +25,14 @@ const headingAnimation = {
 
 const imgAnimation = {
   initial: {
-    opacity: 0,
+    scale: 0,
     x: -100,
     rotate: 180,
   },
   animate: {
     rotate: 0,
     x: 0,
-    opacity: 1,
+    scale: 1,
     transition: {
       duration: 1,
     },

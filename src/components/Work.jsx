@@ -1,19 +1,63 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const imgSrc = "/teddy.svg";
 import { scrollCardData } from "@/data/data";
 
+const headingAnimation = {
+  initial: {
+    scale: 0,
+    x: -100,
+    opacity: 0,
+  },
+  animate: {
+    scale: 1,
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 2,
+      type: "spring",
+    },
+  },
+};
+const headingAnimation2 = {
+  initial: {
+    scale: 0,
+    opacity: 0,
+  },
+  animate: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 2,
+      type: "spring",
+    },
+  },
+};
 const Work = () => {
   return (
     <div id="work" className=" px-4">
       <div className="bg-violet-100 p-12 min-h-[80vh] rounded-2xl">
         <div className="flex justify-between mb-8">
-          <h2 className="text-3xl lg:text-5xl font-bold">
+          <motion.h2
+            variants={headingAnimation}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="text-3xl lg:text-5xl font-bold"
+          >
             Lorem, ipsum dolor.
-          </h2>
-          <h2 className="text-3xl lg:text-5xl text-violet-700 font-bold">
-            App
-          </h2>
+          </motion.h2>
+          <motion.h2
+            variants={headingAnimation2}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="text-3xl lg:text-5xl text-violet-700 font-bold"
+          >
+            Lorem
+          </motion.h2>
         </div>
         <div className="grid grid-cols-2 place-items-center">
           <div className="mt-3 max-w-[40vw] min-h-full grid">

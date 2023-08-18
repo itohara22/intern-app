@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { scrollCardData } from "@/data/data";
-import { motion, easeOutExpo } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
 
 const scrollCardAnimation = {
   initial: {
@@ -11,7 +11,7 @@ const scrollCardAnimation = {
     x: 0,
     transition: {
       duration: 2,
-      ease: easeOutExpo,
+      ease: easeOut,
       type: "spring",
     },
   },
@@ -21,7 +21,6 @@ const headingAnimation = {
   initial: {
     scale: 0,
     x: 100,
-    opacity: 0,
   },
   animate: {
     scale: 1,
@@ -36,7 +35,7 @@ const headingAnimation = {
 
 const ScrollCard = () => {
   return (
-    <div id="emotions">
+    <div id="emotions" className="overflow-x-hidden">
       <motion.h2
         variants={headingAnimation}
         initial="initial"
@@ -51,7 +50,7 @@ const ScrollCard = () => {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className=" flex overflow-x-scroll p-10 hide-scroll-bar"
+        className=" flex overflow-x-scroll p-10 hide-scroll-bar "
       >
         <div className="flex flex-nowrap">
           {scrollCardData.map((data, index) => {

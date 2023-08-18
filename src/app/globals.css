@@ -12,6 +12,9 @@ html {
   scrollbar-width: none;
 }
 
+ul:hover {
+  cursor: default;
+}
 .hide-scroll-bar::-webkit-scrollbar {
   display: none;
 }
